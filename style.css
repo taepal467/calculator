@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Mochiy Pop One', sans-serif;
+    text-align: center;
+}
+
+/* Calculator Container */
+.calc_container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+}
+
+/* Display */
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 10px solid rgb(68, 66, 66);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.display .previousValue {
+    color: rgba(255,255,255,.75);
+    font-size: 1.5rem;
+}
+
+.display .currentValue {
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* Calculator Buttons */
+.btn {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1.5px solid rgb(123, 118, 118,.10);
+    font-family: 'Mochiy Pop One', sans-serif;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 2px;
+    box-shadow: 3px 3px 3px #999;
+    transition: background 0.05s linear;
+    transition: all .05s linear;
+}
+
+.btn:active {
+  transform: translateY(4px);
+}
+
+.span-two {
+    grid-column: span 2;
+    background-color: rgb(89, 189, 232);
+}
+
+.span-two:hover {
+    background-color: rgb(140, 204, 231);
+}
+
+.span-two:active {
+    box-shadow: 0 5px rgb(89, 189, 232);
+    background-color: rgb(30, 143, 192);
+}
+
+.operator-divide,
+.operator-multiply,
+.operator-add,
+.operator-subtract {
+    background-color: rgb(239, 120, 140);
+}
+
+.operator-divide:hover,
+.operator-multiply:hover,
+.operator-add:hover,
+.operator-subtract:hover {
+    background-color: rgb(233, 170, 180);
+}
+
+.operator-divide:active,
+.operator-multiply:active,
+.operator-add:active,
+.operator-subtract:active {
+    box-shadow: 0 5px rgb(239, 120, 140);
+    background-color: rgb(245, 68, 98);
+}
+
+[value],
+.delete {
+    background-color: rgb(88, 85, 85);
+}
+
+[value]:hover,
+.delete:hover {
+    background-color: rgb(119, 116, 116);
+}
+
+[value]:active,
+.delete:active {
+    box-shadow: 0 5px rgb(88, 85, 85);
+    background-color: black;
+}
+
+/* Footer */
+footer p {
+    color: pink;
+   margin-top: -40px;
+   cursor: pointer;
+}
+
+footer a {
+    color: pink;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(245, 68, 98);
+    text-decoration:4px underline rgb(30, 143, 192);
+}
+

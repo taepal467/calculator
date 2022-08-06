@@ -4,12 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/icons8-calculator-16.png">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <main>
+        <div class="calc_container">
+          
+            <div class="display">
+                <div class="previousValue"></div>
+                <div class="currentValue">☻</div>
+            </div>
+        
+                <button class="btn clear span-two">AC</button>
+                <button class="btn delete">&#8592</button>
+                <button class="btn operator-divide" data-action="divide">&#247;</button>
+
+                <button class="btn seven" value="7">7</button>
+                <button class="btn eight" value="8">8</button>
+                <button class="btn nine" value="9">9</button>
+                <button class="btn operator-multiply" data-action="multiply">x</button>
+
+                <button class="btn four" value="4">4</button>
+                <button class="btn five" value="5">5</button>
+                <button class="btn six" value="6">6</button>
+                <button class="btn operator-add" data-action="add">+</button>
+        
+                <button class="btn one" value="1">1</button>
+                <button class="btn two" value="2">2</button>
+                <button class="btn three" value="3">3</button>
+                <button class="btn operator-subtract" data-action="subtract">-</button>
+               
+                <button class="btn zero" value="0">0</button>
+                <button class="btn decimal" value=".">.</button>
+                <button class="btn operator-equals span-two">=</button>
+
+    </div>
+    </main>
+    <footer>
+        <p>&copy;2022 Created by <a href="https://github.com/taepal467" target="_blank">taepal467</a></p>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
